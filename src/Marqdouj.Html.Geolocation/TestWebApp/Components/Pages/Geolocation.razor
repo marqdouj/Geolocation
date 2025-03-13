@@ -1,0 +1,25 @@
+﻿@page "/geolocation"
+@inject IGeolocationService GeolocationService
+
+<PageTitle>Geolocation</PageTitle>
+
+<FluentLayout>
+    <FluentHeader>Geolocation</FluentHeader>
+
+    <div>
+        <FluentButton onclick="GetLocation">Get Location</FluentButton>
+    </div>
+    
+    <FluentLabel>Latitude: @position?.Position.Coords.Latitude</FluentLabel>
+    <FluentLabel>Latitude: @position?.Position.Coords.Longitude</FluentLabel>
+    <FluentLabel>Success: @position?.IsSuccess</FluentLabel>
+</FluentLayout>
+
+@code {
+    private GeolocationResult? position;
+
+    private async Task GetLocation()
+    {
+        position = await GeolocationService.GetCurrentPosition();
+    }
+}

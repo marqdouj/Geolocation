@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.35906.104 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marqdouj.Html.Geolocation", "Marqdouj.Html.Geolocation\Marqdouj.Html.Geolocation.csproj", "{39061494-BF45-47F7-824B-D92D1214337C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestWebApp", "TestWebApp\TestWebApp.csproj", "{B302BAD0-EE56-43CB-A4CA-97F20FD46340}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39061494-BF45-47F7-824B-D92D1214337C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39061494-BF45-47F7-824B-D92D1214337C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39061494-BF45-47F7-824B-D92D1214337C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39061494-BF45-47F7-824B-D92D1214337C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B302BAD0-EE56-43CB-A4CA-97F20FD46340}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B302BAD0-EE56-43CB-A4CA-97F20FD46340}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B302BAD0-EE56-43CB-A4CA-97F20FD46340}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B302BAD0-EE56-43CB-A4CA-97F20FD46340}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8AE4862B-6D02-48C1-A883-78F3962BD767}
+	EndGlobalSection
+EndGlobal
