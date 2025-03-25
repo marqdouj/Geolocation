@@ -6,20 +6,57 @@
 <FluentLayout>
     <FluentHeader>Geolocation</FluentHeader>
 
-    <div>
-        <FluentButton onclick="GetLocation">Get Location</FluentButton>
-    </div>
-    
-    <FluentLabel>Latitude: @position?.Position.Coords.Latitude</FluentLabel>
-    <FluentLabel>Latitude: @position?.Position.Coords.Longitude</FluentLabel>
-    <FluentLabel>Success: @position?.IsSuccess</FluentLabel>
+    <FluentStack Orientation="Orientation.Vertical">
+        <FluentStack VerticalAlignment="VerticalAlignment.Center">
+            <FluentLabel Typo="Typography.H5">This page demonstrates the Html Geolocation Service </FluentLabel>
+            <FluentAnchor Href="https://www.nuget.org/packages/Marqdouj.Html.Geolocation/"
+                          Target="_blank">
+                NuGet
+            </FluentAnchor>
+            <FluentAnchor Href="https://github.com/marqdouj/Geolocation"
+                          Target="_blank">
+                GitHub
+            </FluentAnchor>
+        </FluentStack>
+
+        <FluentCard>
+            <FluentButton onclick="GetLocation">Get Location</FluentButton>
+            <div>
+                @if (loading)
+                {
+                    <FluentProgressRing />
+                }
+            </div>
+            <FluentLabel>Latitude: @position?.Position.Coords.Latitude</FluentLabel>
+            <FluentLabel>Latitude: @position?.Position.Coords.Longitude</FluentLabel>
+            <FluentLabel>@message</FluentLabel>
+        </FluentCard>
+    </FluentStack>
 </FluentLayout>
 
 @code {
     private GeolocationResult? position;
+    private bool loading;
+    private string? message;
 
     private async Task GetLocation()
     {
-        position = await GeolocationService.GetCurrentPosition();
+        try
+        {
+            loading = true;
+            message = "";
+            position = await GeolocationService.GetCurrentPosition();
+
+            message = position.IsSuccess ? "Success!" : position.Error.Message;
+        }
+        catch (Exception ex)
+        {
+            message = ex.Message;
+        }
+        finally
+        {
+            loading = false;
+            StateHasChanged();
+        }
     }
 }
