@@ -3,6 +3,9 @@
 - A demo of this and all of my NuGet packages can be found [here](https://github.com/marqdouj/Blazor-Demos/).
 
 ## Release Notes
+### 8.8.2
+- Updated NuGet packges
+
 ### 8.8.1
 - Updated NuGet packges
 
