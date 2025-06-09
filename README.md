@@ -1,8 +1,12 @@
 # Geolocation Service
 - RCL wrapper to the Html Geolocation API
-- A demo of this and all of my NuGet packages can be found [here](https://github.com/marqdouj/Blazor-Demos/).
+- A demo of this and all of my NuGet packages can be found 
+[here](https://github.com/marqdouj/BlazorSandbox/).
 
 ## Release Notes
+### 8.8.3
+- Update ReadMe
+
 ### 8.8.2
 - Updated NuGet packges
 

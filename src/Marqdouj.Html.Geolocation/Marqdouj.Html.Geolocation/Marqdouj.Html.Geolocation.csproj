@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-	<Version>8.8.2</Version>
+	<Version>8.8.3</Version>
 	<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	<Title>Html wrapper for Geolocation API</Title>
 	<PackageProjectUrl>https://github.com/marqdouj/Geolocation</PackageProjectUrl>
